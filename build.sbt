@@ -1,9 +1,15 @@
 name := "ScalaLabs"
 
-version := "0.1"
+version := "1.0"
 
-scalaVersion := "2.12.11"
+scalaVersion := "2.12.8"
 
-libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0"
+libraryDependencies += "org.typelevel" %% "cats-effect" % "1.3.0" withSources() withJavadoc()
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.1" % "test"
+scalacOptions ++= Seq(
+  "-feature",
+  "-deprecation",
+  "-unchecked",
+  "-language:postfixOps",
+  "-language:higherKinds",
+  "-Ypartial-unification")
